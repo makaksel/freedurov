@@ -1,0 +1,61 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.PageWrapper {
+  $this: &;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: var(--body-bg);
+
+
+  &__canvas {
+    opacity: 0.3;
+    -webkit-mask: center repeat;
+    -webkit-mask-size: 420px auto;
+    -webkit-mask-image: url("/icons/pattern.svg");
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    z-index: -1;
+  }
+
+
+  &__img{
+    width: 100%!important;
+    height: auto;
+
+    &-wrp{
+      @include containerLarge;
+      width: calc(100% - #{rem(85)});
+      max-width: var(--max-width-large);
+      height: auto;
+      margin-top: rem(40);
+      z-index: 1;
+    }
+  }
+
+  &__footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: rem(45);
+    padding: rem(17) rem(32);
+    background-color: #6eabea;
+    border-radius: rem(84);
+
+    max-width: max-content;
+
+
+    z-index: -1;
+  }
+}

@@ -1,0 +1,41 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.Post {
+  $this: &;
+  display: flex;
+  align-items: flex-start;
+  gap: rem(30);
+
+  + #{$this} {
+    margin-top: rem(30);
+  }
+
+  &__title{
+    display: flex;
+    align-items: flex-end;
+    gap: rem(10);
+
+  }
+
+  &__media {
+    flex: 0 0 rem(95);
+    border-radius: rem(15);
+    overflow: hidden;
+    max-height: rem(95);
+    object-fit: cover;
+  }
+
+  &__img {
+    object-fit: cover;
+    display: flex;
+    width: 100% !important;
+    height: rem(95);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(13)
+  }
+}

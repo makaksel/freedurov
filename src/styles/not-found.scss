@@ -1,0 +1,59 @@
+@import "./functions";
+@import "./media-queries";
+@import "./mixins";
+
+.not-found {
+  @include container;
+
+
+  &__hero {
+    margin-top: rem(116);
+    margin-bottom: rem(235);
+
+    @include md {
+      margin-top: rem(50);
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__title {
+
+    margin-bottom: rem(20);
+  }
+
+  &__grid-wrp {
+    display: grid;
+    grid-template-columns: minmax(#{rem(200)}, 1fr) 1fr;
+    grid-gap: rem(20);
+
+    @include md {
+      grid-gap: rem(167);
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    max-width: rem(455);
+  }
+
+
+  &__btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 100%;
+    width: 100%;
+
+    grid-column: 2/2;
+
+    margin-bottom: rem(300);
+    gap: rem(10);
+
+    padding-bottom: rem(12);
+
+
+
+  }
+}

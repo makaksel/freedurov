@@ -1,0 +1,13 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.Social {
+
+
+  &__btn{
+    @include buttonLight;
+    margin-top: rem(52);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

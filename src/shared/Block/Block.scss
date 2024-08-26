@@ -1,0 +1,22 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.Block {
+  display: flex;
+  flex-direction: column;
+
+  padding: rem(60);
+
+  background-color: var(--white);
+  border-radius: rem(30);
+
+
+  &__wrp {
+    @include container;
+
+  }
+
+  &__title {
+    margin-bottom: rem(40);
+  }
+}

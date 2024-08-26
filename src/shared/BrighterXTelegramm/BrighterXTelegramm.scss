@@ -1,0 +1,32 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.BrighterXTelegramm {
+  display: flex;
+  align-items: center;
+  gap: rem(6);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+
+    font-size: rem(32);
+    line-height: rem(38);
+  }
+
+  &--size{
+    &_large{
+      gap: rem(10);
+    }
+  }
+
+  &__x{
+    fill: #AFAFAF;
+
+    &--white{
+      fill: rgba(#fff, 0.44);
+
+    }
+  }
+}

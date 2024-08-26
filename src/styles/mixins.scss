@@ -1,0 +1,128 @@
+@import 'functions';
+@import 'media-queries';
+
+@mixin containerBase($width) {
+  width: calc(100% - var(--x-spacing) * 2);
+  max-width: $width;
+  padding: 0 var(--x-spacing);
+  margin: 0 auto;
+}
+
+@mixin container() {
+  @include containerBase(var(--max-width));
+}
+
+@mixin containerLarge() {
+  @include containerBase(var(--max-width-large));
+}
+
+
+@mixin font {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin textBase {
+  @include font;
+  font-size: rem(24);
+  line-height: 120%;
+
+  letter-spacing: -0.8px;
+}
+
+@mixin textBtn {
+  @include textBase;
+  font-size: rem(20);
+  font-weight: 500;
+
+  letter-spacing: -0.8px;
+}
+
+@mixin h1 {
+  @include font;
+  font-size: rem(35);
+  line-height: 120%;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: -0.8px;
+}
+
+@mixin h2 {
+  @include font;
+  font-size: rem(22);
+  line-height: 120%;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+}
+
+@mixin button {
+  @include textBtn;
+  max-width: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  text-align: center;
+
+  border: none;
+
+  padding: rem(15) rem(35);
+
+  border-radius: rem(30);
+
+  background-color: var(--blue);
+  color: var(--white);
+
+  transition: color 0.15s ease-in-out,
+  stroke 0.15s ease-in-out,
+  background-color 0.15s ease-in-out,
+  opacity 0.15s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.67;
+  }
+
+  &--disabled {
+    pointer-events: none;
+  }
+
+}
+
+@mixin buttonLight {
+ @include button;
+  max-width: rem(230);
+  background-color: var(--light-blue);
+  color: var(--blue);
+
+
+}
+
+@mixin scrollbar {
+  ::-webkit-scrollbar {
+    width: rem(16);
+    height: rem(16);
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: rem(8);
+    height: rem(8);
+
+    border: rem(4) solid transparent;
+    border-radius: rem(8);
+    background-clip: padding-box;
+    transition: all 0.5s ease-in-out;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

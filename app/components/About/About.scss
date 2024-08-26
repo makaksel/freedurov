@@ -1,0 +1,44 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.About {
+
+
+  &__media{
+    margin-bottom: rem(30);
+
+    * {
+      border: none!important;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    margin-bottom: rem(30);
+  }
+
+  &__projects{
+    display: flex;
+
+    gap: rem(12);
+
+    margin-top: rem(20);
+
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: rem(102);
+      background-color: var(--light-gray);
+      border-radius: rem(20);
+      gap: rem(4)
+    }
+  }
+
+  &__btn{
+    @include button;
+  }
+}

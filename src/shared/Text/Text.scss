@@ -1,0 +1,59 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+
+.Text {
+  @include textBase;
+
+  &--weight {
+
+    &_regular {
+      font-weight: 400;
+    }
+
+    &_medium {
+      font-weight: 500;
+    }
+
+    &_semibold {
+      font-weight: 600;
+    }
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--variant {
+    &_h1 {
+      @include h1;
+    }
+
+    &_h2 {
+      @include h2
+    }
+
+  }
+
+  &--color {
+
+    &_inherit {
+      color: inherit;
+    }
+
+
+    &_white {
+      color: var(--white);
+    }
+
+    &_gray-30 {
+      color: var(--gray-text__30);
+    }
+
+    &_gray-40 {
+      color: var(--gray-text__40);
+    }
+
+  }
+
+}
