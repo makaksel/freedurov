@@ -8,7 +8,7 @@ export interface IPageProps {
 }
 
 export interface IPost {
-  id: number;
+  id?: number;
   img: StaticImport;
   content?: ReactChildren;
   source: string;

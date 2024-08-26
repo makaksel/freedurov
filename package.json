@@ -13,6 +13,7 @@
     "@sanity/icons": "^3.3.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/locale-ru-kz": "^1.1.9",
+    "@sanity/types": "^3.55.0",
     "@sanity/vision": "^3.54.0",
     "framer-motion": "^11.3.28",
     "next": "14.2.5",

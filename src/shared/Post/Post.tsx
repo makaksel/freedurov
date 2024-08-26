@@ -8,7 +8,6 @@ import Image from 'next/image';
 const cn = makeCn('Post');
 
 interface PostProps extends IPost {
-  id: number;
   children: React.ReactNode;
   className?: string;
 }

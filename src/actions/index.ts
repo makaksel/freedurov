@@ -1,6 +1,5 @@
 import { telegramBotId, telegramChatId } from "@/src/data/const";
 import { redirect } from "next/navigation";
-import { routerLinks } from "@/src/data/navigation";
 
 export async function createTelegrammNotify(formDataReq: FormData) {
   'use server'
@@ -36,6 +35,5 @@ ${formData?.comment ? `комментарий: ${formData.comment};` : ''}
 
   await response.json();
 
-  redirect(routerLinks.success);
 
 }
