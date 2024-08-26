@@ -4,6 +4,7 @@ import './Post.scss';
 import { makeCn } from '@/src/utils';
 import { Text } from '@/src/shared/Text';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const cn = makeCn('Post');
 
@@ -12,9 +13,10 @@ interface PostProps extends IPost {
   className?: string;
 }
 
-export const Post: React.FC<PostProps> = ({ children, img, title, source, titleSource, className }) => {
+export const Post: React.FC<PostProps> = ({ children, img, title, source, titleSource, className, link }) => {
   return (
     <article className={cn('', [className])}>
+      {link && <Link href={link} className={"stretched-link"}/>}
       <div className={cn('media')}>
         <Image src={img} className={cn('img')} alt={source} />
       </div>

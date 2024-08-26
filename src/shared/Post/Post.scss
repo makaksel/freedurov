@@ -5,10 +5,16 @@
   $this: &;
   display: flex;
   align-items: flex-start;
-  gap: rem(30);
+
+  position: relative;
+  transition: opacity 0.15s ease-in-out;
 
   + #{$this} {
     margin-top: rem(30);
+  }
+
+  &:hover{
+    opacity: 0.8;
   }
 
   &__title{
@@ -24,6 +30,8 @@
     overflow: hidden;
     max-height: rem(95);
     object-fit: cover;
+
+    margin-right: rem(30);
   }
 
   &__img {

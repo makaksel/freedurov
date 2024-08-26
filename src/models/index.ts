@@ -12,6 +12,7 @@ export interface IPost {
   img: StaticImport;
   content?: ReactChildren;
   source: string;
+  link: string;
   title?: string;
   titleSource?: string;
 }
