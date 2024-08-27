@@ -27,7 +27,14 @@ export const BrighterXTelegramm: React.FC<BrighterXTelegrammProps> = ({
           <Image src={brighter} alt={''} className={cn('icon')} width={size !== 'large' ? 30 : 36}
                  height={size !== 'large' ? 30 : 36} quality={100} />
 
-          {/*<Icon name={'brighter'} className={cn('icon')} width={size !== 'large' ? 30 : 36} height={size !== 'large' ? 30 : 36}></Icon>*/}
+          {/*
+          <Icon
+                name={'brighter'}
+                className={cn('icon')}
+                width={size !== 'large' ? 30 : 36}
+                height={size !== 'large' ? 30 : 36}
+              ></Icon>
+          */}
         </span>
       <Icon name={'x'} className={cn('x', { white: color === 'white' })} width={size !== 'large' ? 10 : 13}
             height={size !== 'large' ? 11 : 14}></Icon>
@@ -35,7 +42,14 @@ export const BrighterXTelegramm: React.FC<BrighterXTelegrammProps> = ({
           <Text color={color}>Telegram</Text>
                     <Image src={telegramm} alt={''} className={cn('icon')} width={size !== 'large' ? 30 : 36}
                            height={size !== 'large' ? 30 : 36} quality={100} />
-        {/*<Icon name={'telegramm'} className={cn('icon')} width={size !== 'large' ? 30 : 36} height={size !== 'large' ? 30 : 36}></Icon>*/}
+        {/*
+          <Icon
+                name={'telegramm'}
+                className={cn('icon')}
+                width={size !== 'large' ? 30 : 36}
+                height={size !== 'large' ? 30 : 36}
+              ></Icon>
+          */}
         </span>
     </div>
   );
