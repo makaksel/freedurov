@@ -5,6 +5,8 @@ import { makeCn } from '@/src/utils';
 import { Block } from '@/src/shared/Block';
 import { Post } from '@/src/shared/Post';
 import { getSocial } from '@/sanity/sanity.query';
+import { TELEGRAM_CHANEL_MAIN_LINK } from '@/src/data/const';
+import Link from 'next/link';
 
 const cn = makeCn('Social');
 
@@ -24,7 +26,7 @@ export const Social = async () => {
         </Post>,
       )}
 
-      <button className={cn('btn')}>Показать ещё</button>
+      <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={cn('btn')}>Показать ещё</Link>
     </Block>
   );
 };

@@ -5,6 +5,8 @@ import { makeCn } from '@/src/utils';
 import { Block } from '@/src/shared/Block';
 import { Post } from '@/src/shared/Post';
 import { getNews } from '@/sanity/sanity.query';
+import Link from 'next/link';
+import { TELEGRAM_CHANEL_MAIN_LINK } from '@/src/data/const';
 
 
 const cn = makeCn('News');
@@ -18,7 +20,7 @@ export const News = async () => {
     <Block className={cn('')} title="Последние новости">
       {data.map(({ _id, content, ...item }) => <Post key={_id} {...item} className={cn('item')}>{content}</Post>)}
 
-      <button className={cn('btn')}>Показать ещё</button>
+      <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={cn('btn')}>Показать ещё</Link>
     </Block>
   );
 };
