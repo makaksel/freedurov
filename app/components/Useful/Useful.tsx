@@ -9,6 +9,8 @@ import { Block } from '@/src/shared/Block';
 import { DoubleRoundImage } from '@/src/shared/DoubleRoundImage';
 import { Text } from '@/src/shared/Text';
 import { Icon } from '@/src/shared/Icon';
+import Link from 'next/link';
+import { TELEGRAM_CHANEL_MAIN_LINK } from '@/src/data/const';
 
 const cn = makeCn('Useful');
 
@@ -19,9 +21,11 @@ export const Useful = () => {
 
       <div className={cn('items')}>
         <div className={cn('item')}>
+          <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={'stretched-link'} />
           <Image src={pack1} alt={''} className={cn('img')}/>
         </div>
         <div className={cn('item')}>
+          <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={'stretched-link'} />
           <Image src={pack2} alt={''} className={cn('img')}/>
         </div>
       </div>

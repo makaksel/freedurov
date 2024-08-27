@@ -24,7 +24,7 @@ export const MainBlock = () => {
 
       <BrighterXTelegramm className={cn('together')} />
 
-      <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={cn('btn')}>Следить новостями</Link>
+      <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={cn('btn')}>Следить за новостями</Link>
     </Block>
   );
 };
