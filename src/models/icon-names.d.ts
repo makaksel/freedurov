@@ -2,6 +2,6 @@
  
 export type IconName =
 	| "brighter"
-	| "telegramm"
+	| "telegram"
 	| "vk"
 	| "x";
