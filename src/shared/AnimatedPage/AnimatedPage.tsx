@@ -1,9 +1,8 @@
-"use client"
+'use client';
 
-import { AnimatePresence, motion } from "framer-motion"
-import ReactDOM from "react-dom"
-import { ReactChildren } from "@/src/models";
-import React from "react";
+import { AnimatePresence, motion } from 'framer-motion';
+import { ReactChildren } from '@/src/models';
+import React from 'react';
 
 interface AnimatedPageProps {
   children?: ReactChildren,

@@ -3,6 +3,15 @@
 
 .Social {
 
+  &__item{
+
+    &-media{
+      @include xxs{
+        display: none;
+      }
+
+    }
+  }
 
   &__btn{
     @include buttonLight;

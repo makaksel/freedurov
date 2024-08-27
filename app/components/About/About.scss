@@ -36,6 +36,10 @@
       border-radius: rem(20);
       gap: rem(4)
     }
+
+    @include xxs {
+      margin-top: 0;
+    }
   }
 
   &__btn{

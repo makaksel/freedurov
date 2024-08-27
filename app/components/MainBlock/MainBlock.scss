@@ -25,4 +25,9 @@
   &__btn{
     @include button;
   }
+
+  @include xs{
+    padding-left: rem(20)!important;
+    padding-right: rem(20)!important;
+  }
 }

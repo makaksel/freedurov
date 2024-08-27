@@ -6,6 +6,10 @@
   align-items: center;
   gap: rem(6);
 
+  @include xxs{
+    gap: rem(3);
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -13,6 +17,19 @@
 
     font-size: rem(32);
     line-height: rem(38);
+
+
+    @include xxs{
+      font-size: rem(16);
+      line-height: rem(18);
+    }
+  }
+
+  &__icon{
+    @include xxs{
+      width: rem(19);
+      height: rem(19);
+    }
   }
 
   &--size{
@@ -26,7 +43,11 @@
 
     &--white{
       fill: rgba(#fff, 0.44);
+    }
 
+    @include xxs{
+      width: rem(6);
+      height: rem(7);
     }
   }
 }

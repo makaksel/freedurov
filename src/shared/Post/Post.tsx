@@ -11,13 +11,14 @@ const cn = makeCn('Post');
 interface PostProps extends IPost {
   children: React.ReactNode;
   className?: string;
+  classNameMedia?: string;
 }
 
-export const Post: React.FC<PostProps> = ({ children, img, title, source, titleSource, className, link }) => {
+export const Post: React.FC<PostProps> = ({ children, img, title, source, titleSource, className, classNameMedia, link }) => {
   return (
     <article className={cn('', [className])}>
       {link && <Link href={link} className={"stretched-link"}/>}
-      <div className={cn('media')}>
+      <div className={cn('media', [classNameMedia])}>
         <Image src={img} className={cn('img')} alt={source} />
       </div>
       <div className={cn('body')}>
@@ -26,7 +27,7 @@ export const Post: React.FC<PostProps> = ({ children, img, title, source, titleS
           <Text weight={'medium'} color={'gray-30'}>{titleSource}</Text>
         </p>}
         <Text>{children}</Text>
-        <Text color={'gray-40'}>Источник: {source}</Text>
+        <Text color={'gray-40'} className={cn('source')}>Источник: {source}</Text>
       </div>
     </article>
   );

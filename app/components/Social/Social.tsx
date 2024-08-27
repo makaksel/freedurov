@@ -19,7 +19,7 @@ const data: IPost[] = [
     titleSource: '@paulg',
     content: 'Трудно представить тебе страну, которая одновременно арестовывает основателей Telegram и является крупным центром стартапов.',
     source: 'x.com',
-    link: 'https://t.me/sale_caviar/8931'
+    link: 'https://t.me/sale_caviar/8931',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const data: IPost[] = [
     titleSource: '@ilonmask',
     content: 'In 2030 in Europe and you are being executed for liking a meme',
     source: 'x.com',
-    link: 'https://t.me/musk_twitter/7419'
+    link: 'https://t.me/musk_twitter/7419',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const data: IPost[] = [
     titleSource: '@TuckerCarlson',
     content: 'Pavel Durov sits in a French jail tonight, a living warning to any platform owner who refuses to censor the truth at the behest of government and intel agencies',
     source: 'x.com',
-    link: 'https://t.me/TuckerCarlsonNetwork/49'
+    link: 'https://t.me/TuckerCarlsonNetwork/49',
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const data: IPost[] = [
     titleSource: '@ekaterina_mizulina',
     content: 'Он наш русский гений и мы должны биться за него до конца',
     source: 'Telegram',
-    link: 'https://t.me/ekaterina_mizulina/10428'
+    link: 'https://t.me/ekaterina_mizulina/10428',
   },
 ];
 
@@ -54,7 +54,16 @@ export const Social = () => {
   return (
 
     <Block className={cn('')} title="СОЦИАЛЬНЫЕ СЕТИ">
-      {data.map(({ id, content, ...item }) => <Post key={id} {...item} className={cn('item')}>{content}</Post>)}
+      {data.map(({ id, content, ...item }) =>
+        <Post
+          key={id}
+          className={cn('item')}
+          classNameMedia={cn('item-media')}
+          {...item}
+        >
+          {content}
+        </Post>,
+      )}
 
       <button className={cn('btn')}>Показать ещё</button>
     </Block>

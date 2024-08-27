@@ -23,7 +23,7 @@ export const About = () => {
           listed on the Forbes Billionaires List in 2023, with a net worth of $11.5 billion.</Text>
       </div>
 
-      <Text color="gray-30">Кто это?</Text>
+      <Text color="gray-30" className={"hide-xxs"}>Проекты</Text>
       <div className={cn('projects')}>
         <div className={cn('projects-item')}>
           <Text>Telegram</Text>

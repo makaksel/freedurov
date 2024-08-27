@@ -40,6 +40,10 @@
       height: auto;
       margin-top: rem(40);
       z-index: 1;
+
+      @include xs {
+        margin-top: rem(20);
+      }
     }
   }
 
@@ -57,5 +61,9 @@
 
 
     z-index: -1;
+
+    @include xs {
+      display: none!important;
+    }
   }
 }

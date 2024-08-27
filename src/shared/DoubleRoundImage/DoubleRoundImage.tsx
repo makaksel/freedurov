@@ -17,7 +17,7 @@ export const DoubleRoundImage: React.FC<DoubleRoundImageProps> = ({ images, clas
   return (
     <div className={cn('', { align, withDog }, [className])}>
       {images?.map((img, index) => (<div key={index} className={cn('img-wrp')}>
-        <Image src={img} className={cn('img')} width={200} height={200} alt={'freedurov'}></Image>
+        <Image src={img} className={cn('img')} alt={'freedurov'}></Image>
       </div>))}
     </div>
   );

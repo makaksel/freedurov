@@ -29,6 +29,13 @@
   line-height: 120%;
 
   letter-spacing: -0.8px;
+
+
+  @include xs {
+
+    font-size: rem(20);
+
+  }
 }
 
 @mixin textBtn {
@@ -48,6 +55,10 @@
   text-transform: uppercase;
 
   letter-spacing: -0.8px;
+
+  @include xs {
+    font-size: rem(30);
+  }
 }
 
 @mixin h2 {

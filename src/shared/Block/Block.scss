@@ -2,6 +2,7 @@
 @import "@/src/styles/mixins";
 
 .Block {
+  $this: &;
   display: flex;
   flex-direction: column;
 
@@ -10,13 +11,28 @@
   background-color: var(--white);
   border-radius: rem(30);
 
+  overflow: hidden;
+
 
   &__wrp {
     @include container;
 
+
+    + #{$this}__wrp {
+      margin-top: rem(9);
+    }
   }
 
   &__title {
     margin-bottom: rem(40);
+
+    @include xs{
+      margin-bottom: rem(20);
+    }
+  }
+
+
+  @include xs{
+    padding: rem(30) rem(20);
   }
 }

@@ -1,12 +1,8 @@
-import { ReactChildren } from '@/src/models';
 import React from 'react';
 import './MainBlock.scss';
-import { AnimatedPage } from '@/src/shared/AnimatedPage/AnimatedPage';
 import { makeCn } from '@/src/utils';
 import dog from '@/src/resources/images/dog.png';
 import pavel1 from '@/src/resources/images/pavel1.png';
-import Image from 'next/image';
-import { Icon } from '@/src/shared/Icon';
 import { Text } from '@/src/shared/Text';
 import Link from 'next/link';
 import { Block } from '@/src/shared/Block';

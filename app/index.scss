@@ -29,7 +29,7 @@ body {
   max-width: 100vw;
 
   background-color: var(--blue-bg);
-  //background-image: var;
+
   overflow-x: hidden;
 }
 
@@ -46,7 +46,14 @@ main {
   margin-top: calc(100vh + #{rem(50)});
   margin-bottom: rem(260);
 
-  gap: rem(9)
+  @include xs {
+    margin-top: rem(220);
+    margin-bottom: rem(20);
+  }
+
+  @include xxs{
+    margin-top: rem(120);
+  }
 }
 
 
@@ -78,6 +85,11 @@ a {
 
 .hide-md {
   @include md {
+    display: none !important;
+  }
+}
+.hide-xxs{
+  @include xxs {
     display: none !important;
   }
 }

@@ -8,6 +8,9 @@
     gap:rem(12);
     width: 100%;
 
+    @include xxs {
+      flex-direction: column;
+    }
   }
 
   &__item{

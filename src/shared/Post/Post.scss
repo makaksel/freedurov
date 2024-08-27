@@ -13,6 +13,10 @@
     margin-top: rem(30);
   }
 
+  @include xxs{
+    flex-direction: column;
+  }
+
   &:hover{
     opacity: 0.8;
   }
@@ -21,6 +25,8 @@
     display: flex;
     align-items: flex-end;
     gap: rem(10);
+
+    white-space: nowrap;
 
   }
 
@@ -32,6 +38,15 @@
     object-fit: cover;
 
     margin-right: rem(30);
+
+    @include xxs{
+      flex: 0 0 100%;
+      width: 100%;
+      max-height: rem(160);
+
+      margin-right: 0;
+      margin-bottom: rem(20);
+    }
   }
 
   &__img {
@@ -39,11 +54,25 @@
     display: flex;
     width: 100% !important;
     height: rem(95);
+
+    @include xxs{
+      height: rem(160);
+    }
   }
 
   &__body {
     display: flex;
     flex-direction: column;
-    gap: rem(13)
+    gap: rem(13);
+
+    @include xxs{
+      gap: rem(10);
+    }
+  }
+
+  &__source{
+    @include xxs{
+      font-size: rem(18);
+    }
   }
 }
