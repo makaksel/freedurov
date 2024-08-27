@@ -1,0 +1,35 @@
+@import "@/src/styles/functions";
+@import "@/src/styles/mixins";
+
+.HeartButton {
+  $this: &;
+
+  @include buttonLight;
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  padding: rem(10)!important;
+
+  font-size: rem(20);
+
+
+  &__icon{
+    fill: var(--blue);
+    border-radius: 50%;
+    padding: rem(5);
+  }
+
+  &--active{
+    @include button;
+
+    #{$this}__icon{
+
+      background-color: var(--white);
+    }
+  }
+
+  &--loading{
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}

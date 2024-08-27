@@ -9,6 +9,8 @@ import { Block } from '@/src/shared/Block';
 import { DoubleRoundImage } from '@/src/shared/DoubleRoundImage';
 import { TELEGRAM_CHANEL_MAIN_LINK } from '@/src/data/const';
 import { BrighterXTelegramm } from '@/src/shared/BrighterXTelegramm';
+import { HeartButton } from '@/src/shared/HeartButton';
+import { HeartButtonCounter } from '@/src/shared/HeartButton/HeartButtonCounter';
 
 const cn = makeCn('MainBlock');
 
@@ -24,7 +26,7 @@ export const MainBlock = () => {
 
       <BrighterXTelegramm className={cn('together')} />
 
-      <Link href={TELEGRAM_CHANEL_MAIN_LINK} className={cn('btn')}>Следить за новостями</Link>
+      <HeartButtonCounter className={cn('btn')}></HeartButtonCounter>
     </Block>
   );
 };

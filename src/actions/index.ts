@@ -1,39 +1,34 @@
-import { telegramBotId, telegramChatId } from "@/src/data/const";
-import { redirect } from "next/navigation";
+'use server';
 
-export async function createTelegrammNotify(formDataReq: FormData) {
-  'use server'
+import { dataset, projectId } from '@/sanity/env';
 
-  const formData = Object.fromEntries(formDataReq);
-  const message = `*⚠️ Новое обращение*
+export async function updateHeart() {
 
-👤 имя: ${formData.name};
-${formData?.email ? `📞 почта: ${formData.email};` : ''}
-${formData?.phone ? `📞 телефон: ${formData.phone};` : ''}
-${formData?.telegram ? `📬 telegram: ${formData.telegram};` : ''}
-
-${formData?.comment ? `комментарий: ${formData.comment};` : ''}
-`;
-
-  const response = await fetch(`https://api.telegram.org/bot${telegramBotId}/sendMessage`, {
+  const response = await fetch(`https://${projectId}.api.sanity.io/v2021-06-07/data/mutate/${dataset}?returnDocuments=true`, {
     method: 'POST',
     mode: 'cors',
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SANITY_TOKEN}`,
     },
     redirect: 'follow',
     referrerPolicy: 'no-referrer',
     body: JSON.stringify({
-      chat_id: telegramChatId,
-      text: message,
-      parse_mode: 'Markdown',
+      'mutations': [
+        {
+          'patch': {
+            'id': 'main',
+            'inc': {
+              'like': 1,
+            },
+          },
+        },
+      ],
     }),
-  });
+  }).then((res) => res.json());
 
 
-  await response.json();
-
-
+  return response.results[0].document.like
 }

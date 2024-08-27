@@ -36,20 +36,4 @@ export const news = defineType({
     }),
 
   ],
-  orderings: [
-    {
-      title: 'Release Date, New',
-      name: 'releaseDateDesc',
-      by: [
-        {field: 'releaseDate', direction: 'desc'}
-      ]
-    },
-    {
-      title: 'Release Date, Old',
-      name: 'releaseDateAsc',
-      by: [
-        {field: 'releaseDate', direction: 'asc'}
-      ]
-    }
-  ]
 });

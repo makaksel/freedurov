@@ -27,3 +27,14 @@ export async function getSocial() {
     }`,
   );
 }
+
+export async function getLikes() {
+  const likes = await client.fetch(
+    groq`*[ _type == "main" ]{
+      _id,
+      like
+    }`,
+  );
+
+  return likes[0].like
+}
