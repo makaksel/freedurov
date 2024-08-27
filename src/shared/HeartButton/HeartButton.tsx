@@ -16,8 +16,6 @@ export interface HeartButtonProps {
 
 export const HeartButton: React.FC<HeartButtonProps> = ({ count, className }) => {
 
-  const [likes, setLikes] = useState(count);
-  const [loading, setLoading] = useState(false);
   const [isVote, setIsVote] = useState<boolean | null>(false);
 
   useEffect(() => {
@@ -26,19 +24,19 @@ export const HeartButton: React.FC<HeartButtonProps> = ({ count, className }) =>
   }, []);
 
   const clickHandler = async () => {
-    if (isVote) return;
 
-    setLoading(true);
-    const newCount = await updateHeart();
-    setLikes(newCount);
+    if (isVote) return;
 
     setIsVote(true);
     localStorage.setItem('isVote', 'Y');
-    setLoading(false);
+
+    await updateHeart();
   };
+
   const spring = { type: 'spring', damping: 10, stiffness: 100, duration: 9 };
+
   return (
-    <button className={cn('', { active: !!isVote, loading }, [className])} onClick={clickHandler}>
+    <button className={cn('', { active: !!isVote }, [className])} onClick={clickHandler}>
 
       <Icon className={cn('icon')} name={'heart'} width={24} height={24}></Icon>
       {!isVote ?
@@ -55,7 +53,7 @@ export const HeartButton: React.FC<HeartButtonProps> = ({ count, className }) =>
           animate={{ opacity: 1 }}
           transition={spring}
         >
-          {likes}
+          {count}
         </motion.span>}
 
     </button>
