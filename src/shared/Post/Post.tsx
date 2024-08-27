@@ -14,12 +14,28 @@ interface PostProps extends IPost {
   classNameMedia?: string;
 }
 
-export const Post: React.FC<PostProps> = ({ children, img, title, source, titleSource, className, classNameMedia, link }) => {
+export const Post: React.FC<PostProps> = ({
+  children,
+  img,
+  title,
+  source,
+  titleSource,
+  className,
+  classNameMedia,
+  link,
+}) => {
   return (
     <article className={cn('', [className])}>
-      {link && <Link href={link} className={"stretched-link"}/>}
+      {link && <Link href={link} className={'stretched-link'} />}
       <div className={cn('media', [classNameMedia])}>
-        <Image src={img} className={cn('img')} alt={source} />
+        <Image
+          src={img.image}
+          className={cn('img')}
+          width={300}
+          height={300}
+          quality={100}
+          alt={img?.alt || source}
+        />
       </div>
       <div className={cn('body')}>
         {title && <p className={cn('title')}>

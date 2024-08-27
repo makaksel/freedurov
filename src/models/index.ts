@@ -7,9 +7,14 @@ export interface IPageProps {
   searchParams: Partial<any>;
 }
 
+interface IImg {
+  alt?: string,
+  image: string
+}
+
 export interface IPost {
-  id?: number;
-  img: StaticImport;
+  _id?: number;
+  img: IImg;
   content?: ReactChildren;
   source: string;
   link: string;

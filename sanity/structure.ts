@@ -6,13 +6,12 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title('Точно')
     .items([
-      S.documentTypeListItem('post').title('Посты'),
-      /*      S.documentTypeListItem('category').title('Categories'),
-            S.documentTypeListItem('author').title('Authors'),*/
-      // S.documentTypeListItem('author1').title('Tress'),
+      S.documentTypeListItem('news').title('Новости'),
+      S.documentTypeListItem('social').title('Соц.сети'),
+
       S.divider(),
       ...S.documentTypeListItems().filter(
         // @ts-ignore
-        (item) => item.getId() && !['post', 'category', 'author', 'author1'].includes(item.getId()!),
+        (item) => item.getId() && !['news', 'social'].includes(item.getId()!),
       ),
     ]);

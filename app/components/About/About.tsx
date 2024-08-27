@@ -3,10 +3,14 @@ import './About.scss';
 import { makeCn } from '@/src/utils';
 import pavel2 from '@/src/resources/images/pavel2.png';
 import pavel3 from '@/src/resources/images/pavel3.png';
+import telegramm from '@/src/resources/images/telegramm.png';
+import vk from '@/src/resources/images/vk.png';
 import { Block } from '@/src/shared/Block';
 import { DoubleRoundImage } from '@/src/shared/DoubleRoundImage';
 import { Text } from '@/src/shared/Text';
 import { Icon } from '@/src/shared/Icon';
+import pack1 from '@/src/resources/images/pack1.png';
+import Image from 'next/image';
 
 const cn = makeCn('About');
 
@@ -27,11 +31,13 @@ export const About = () => {
       <div className={cn('projects')}>
         <div className={cn('projects-item')}>
           <Text>Telegram</Text>
-          <Icon name={'telegramm'} width={26} height={26} />
+          <Image src={telegramm} alt={''}  width={26} height={26} quality={100}/>
+          {/*<Icon name={'telegramm'} width={26} height={26} />*/}
         </div>
         <div className={cn('projects-item')}>
           <Text>Вконтакте</Text>
-          <Icon name={'vk'} width={26} height={26} />
+          <Image src={vk} alt={''} width={26} height={26}  quality={100}/>
+          {/*<Icon name={'vk'} width={26} height={26} />*/}
         </div>
       </div>
     </Block>
