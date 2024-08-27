@@ -3,12 +3,8 @@ import './Useful.scss';
 import { makeCn } from '@/src/utils';
 import pack1 from '@/src/resources/images/pack1.png';
 import pack2 from '@/src/resources/images/pack2.png';
-import pavel3 from '@/src/resources/images/pavel3.png';
 import Image from 'next/image';
 import { Block } from '@/src/shared/Block';
-import { DoubleRoundImage } from '@/src/shared/DoubleRoundImage';
-import { Text } from '@/src/shared/Text';
-import { Icon } from '@/src/shared/Icon';
 import Link from 'next/link';
 import { TELEGRAM_CHANEL_MAIN_LINK } from '@/src/data/const';
 
