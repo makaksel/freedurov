@@ -10,8 +10,8 @@ import { Useful } from '@/app/components/Useful';
 
 
 export const metadata: Metadata = {
-  title: '',
-  description: '',
+  title: 'FREEDUROV',
+  description: 'Поддержим Павла Дурова',
 };
 
 export default function page() {
