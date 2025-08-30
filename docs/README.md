@@ -7,7 +7,7 @@ Built with **Next.js (TypeScript)**, styled with **SCSS**, powered by **Sanity C
 
 ## ✨ Preview
 
-👉 Live demo: [https://your-vercel-app.vercel.app](https://your-vercel-app.vercel.app)
+👉 Live demo: [https://freedurov-git-main-ecsn.vercel.app/](https://freedurov-git-main-ecsn.vercel.app/)
 
 ### Desktop
 ![Desktop preview](screenshot-desktop.png)
@@ -89,7 +89,7 @@ npm start
 
 ## ✨ Предварительный просмотр
 
-👉 Демонстрация: [https://your-vercel-app.vercel.app](https://your-vercel-app.vercel.app)
+👉 Демонстрация: [https://freedurov-git-main-ecsn.vercel.app/](https://freedurov-git-main-ecsn.vercel.app/)
 
 ### Десктоп
 ![Предварительный просмотр десктопа](screenshot-desktop.png)
